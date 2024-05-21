@@ -1,8 +1,8 @@
 const Timetable = require("comcigan-parser");
 const timetable = new Timetable();
-const fs = require('fs')
-const path = require("path")
-const writeJsonFilePath = path.join(__dirname, "data/test.json")
+const fs = require("fs");
+const path = require("path");
+const writeJsonFilePath = path.join(__dirname, "data/test.json");
 
 const main = async () => {
   await timetable.init();
@@ -18,16 +18,13 @@ const main = async () => {
 
   // 결과 값을 JSON으로 저장하는 함수
   const jsonString = JSON.stringify(result[1][1], null, 2);
-  fs.writeFile(writeJsonFilePath, jsonString, 'utf-8', (err) => {
+  fs.writeFile(writeJsonFilePath, jsonString, "utf-8", (err) => {
     if (err) {
-      console.log("파일 저장중 에러 발생:", err)
+      console.log("파일 저장중 에러 발생:", err);
     } else {
-      console.log("파일이 성공적으로 저장되었습니다. 경로:", writeJsonFilePath)
+      console.log("파일이 성공적으로 저장되었습니다. 경로:", writeJsonFilePath);
     }
-  }
-  )
-
-
+  });
 };
 
 main();
