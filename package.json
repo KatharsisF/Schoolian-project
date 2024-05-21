@@ -2,7 +2,7 @@
   "name": "ds-project-js",
   "version": "0.0.1",
   "description": "대성고등학교 내부 프로젝트입니다.",
-  "main": "./src/js/index.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/KatharsisF/ds-project-js.git",
   "author": "KatharsisF <katharsis.fps@gmail.com>",
   "license": "MIT",
