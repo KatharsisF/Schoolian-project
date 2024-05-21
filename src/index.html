@@ -1,71 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>JSON to Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <input type="file" id="jsonFile" accept=".json" onchange="loadAndDisplayJson()" />
-    <div id="tableContainer"></div>
-
-    <script>
-        function loadAndDisplayJson() {
-            const fileInput = document.getElementById('jsonFile');
-            const file = fileInput.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    const content = e.target.result;
-                    try {
-                        const json = JSON.parse(content);
-                        generateTable(json);
-                    } catch (error) {
-                        console.error('Error parsing JSON:', error);
-                        alert('파일을 파싱하는 중 에러가 발생했습니다: ' + error);
-                    }
-                };
-
-                reader.readAsText(file);
-            }
-        }
-
-        function generateTable(jsonData) {
-            const container = document.getElementById('tableContainer');
-            container.innerHTML = ''; // 기존 테이블이 있으면 삭제
-
-            const table = document.createElement('table');
-            table.setAttribute('border', '1');
-
-            // 컬럼명을 테이블 헤더로 추가
-            const thead = document.createElement('thead');
-            const headerRow = document.createElement('tr');
-            Object.keys(jsonData[0]).forEach(key => {
-                const th = document.createElement('th');
-                th.textContent = key;
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
-            table.appendChild(thead);
-
-            // JSON 데이터를 테이블 행으로 추가
-            const tbody = document.createElement('tbody');
-            jsonData.forEach(item => {
-                const row = document.createElement('tr');
-                Object.values(item).forEach(value => {
-                    const td = document.createElement('td');
-                    td.textContent = value;
-                    row.appendChild(td);
-                });
-                tbody.appendChild(row);
-            });
-            table.appendChild(tbody);
-
-            container.appendChild(table);
-        }
-    </script>
+    
 </body>
-
 </html>
