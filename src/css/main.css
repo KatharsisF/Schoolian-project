@@ -1,0 +1,26 @@
+.id {
+    display: block;
+}
+
+a {
+    background: yellow;
+    color: #000;
+
+    /* 전이가 일어날 속성값을 정의 */
+    transition-property: background-color;
+
+    /* 전이가 발생되는 시간 명시 */
+    transition-duration: 1s; /* 1000밀리초와 같다 */
+   
+    transition-timing-function: linear; /* 등속도 */
+   
+    transition-delay: .5s; /* 500밀리초 */
+}
+a:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+body {
+    margin: 0%;
+}

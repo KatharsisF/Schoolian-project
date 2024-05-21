@@ -8,9 +8,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "comcigan-parser": "^1.0.0"
-  },
-  "devDependencies": {
-    "express.js": "^1.0.0"
+    "comcigan-parser": "^1.0.0",
+    "dotenv": "^16.4.5"
   }
 }
