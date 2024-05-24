@@ -1,9 +1,9 @@
-const Timetable = require("comcigan-parser");
+const Timetable = require("./comcigan-parser");
 const exp = require("constants");
 const timetable = new Timetable();
 const fs = require("fs");
 const path = require("path");
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 const writeJsonFilePath = path.join(__dirname, "../data/timeTablse.json");
 
 const _grade = process.env.GRADE;

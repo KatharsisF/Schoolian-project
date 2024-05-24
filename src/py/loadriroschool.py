@@ -52,28 +52,29 @@ driver.find_element(By.XPATH, '//*[@id="container"]/div/div[1]/ul/li[2]/ul/li[1]
 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
+print(soup)
 driver.close()
- 
-for i in range(2,12):
-    Playlist = soup.find_all('tr')[i].get_text()
-    Playlist = Playlist.split("\n", 5)
-    Number = Playlist[1]
-    Content = Playlist[2]
-    Content = Content.replace("마감 2019년 ","")
-    Target = Content[:3]
-    Subject = Content[4:6]
-    Content = Content.split("- ",1)
-    Content = Content[1] 
-    Teacher = Playlist[3]
-    Day = Playlist[4]
-    
-    Content_f.append(Content)
-    Subject_f.append(Subject)
-    Day_f.append(Day)
-    Teacher_f.append(Teacher)
-    Target_f.append(Target)
-    Playlist_f.append(Playlist)
-    Number_f.append(Number)
+
+# #for i in range(2,12):
+  #  Playlist = soup.find_all('tr')[i].get_text()
+  #  Playlist = Playlist.split("\n", 5)
+  #  Number = Playlist[1]
+  #  Content = Playlist[2]
+  #  Content = Content.replace("마감 2019년 ","")
+ #  Target = Content[:3]
+ #   Subject = Content[4:6]
+  #  Content = Content.split("- ",1)
+  #  Content = Content[1] 
+ #   Teacher = Playlist[3]
+ # #  Day = Playlist[4]
+  #  
+  #  Content_f.append(Content)
+  #  Subject_f.append(Subject)
+  #  Day_f.append(Day)
+  #  Teacher_f.append(Teacher)
+  #  Target_f.append(Target)
+  #  Playlist_f.append(Playlist)
+  #  Number_f.append(Number)
     
 print(Playlist_f)
 print(Number_f)
