@@ -24,7 +24,7 @@ const main = async () => {
   // console.log(result[1][1][1]);
 
   // 결과 값을 JSON으로 저장하는 함수
-  const jsonString = JSON.stringify(result[[_grade]][_class], null, 2);
+  const jsonString = JSON.stringify(result[_grade][_class], null, 2);
   fs.writeFile(writeJsonFilePath, jsonString, "utf-8", (err) => {
     if (err) {
       console.log("파일 저장중 에러 발생:", err);
