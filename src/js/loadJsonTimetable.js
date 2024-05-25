@@ -1,5 +1,4 @@
 const Timetable = require("./comcigan-parser");
-const exp = require("constants");
 const timetable = new Timetable();
 const fs = require("fs");
 const path = require("path");

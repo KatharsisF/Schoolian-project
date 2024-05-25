@@ -75,11 +75,4 @@ driver.close()
   #  Target_f.append(Target)
   #  Playlist_f.append(Playlist)
   #  Number_f.append(Number)
-    
-print(Playlist_f)
-print(Number_f)
-print(Target_f)
-print(Subject_f)
-print(Teacher_f)
-print(Day_f)
-print(Content_f)
+
